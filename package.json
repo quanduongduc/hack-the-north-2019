@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.39.0",
+    "sass-autoprefixer": "^1.0.1"
+  },
+  "scripts": {
+    "sass": "sass ./sass/app.scss ./css/app.css --watch"
+  }
+}

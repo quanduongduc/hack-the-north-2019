@@ -1,0 +1,36 @@
+.hero {
+  position: relative;
+  padding-top: 190px;
+  padding-bottom: 1300px;
+  background: url(../assets/images/illustration-expanded.png) no-repeat bottom
+      center/ 100%,
+    linear-gradient(to bottom, #f4a6a2, #fcf6d8);
+  &__heading {
+    line-height: $secondary-line-height;
+    font-size: 64px;
+    color: $darkest-grey;
+    margin-bottom: 50px;
+  }
+  &__back-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  &__subheading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    &-content {
+      margin-right: 10px;
+    }
+    .img {
+      opacity: 0.8;
+    }
+  }
+  &__email {
+    max-width: 476px;
+    padding: 4px 4px;
+    gap: 0px 15px;
+  }
+}

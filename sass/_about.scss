@@ -1,0 +1,84 @@
+.about {
+  position: relative;
+  background: $blue-gradient;
+  padding: 200px 0px;
+  color: $light-grey;
+  &__content {
+    max-width: 620px;
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__desc {
+    margin-bottom: 35px;
+  }
+  &__video {
+    max-width: 480px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 15px;
+    background: url(../assets/images/about-image/image3.png);
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 45px;
+    border: 3px solid $accent-blue;
+  }
+  &__gear {
+    &-item {
+      position: absolute;
+      &:hover .about__gear-content {
+        animation: appearance 1s forwards;
+      }
+      &-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        will-change: opacity;
+      }
+      .overlay-item {
+        z-index: 4;
+        animation: nearly-appearance 1s linear forwards;
+      }
+    }
+    &-content {
+      opacity: 0;
+      z-index: 5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 280px;
+      font-size: 28px;
+      text-align: center;
+      will-change: opacity;
+    }
+  }
+  &__info {
+    display: flex;
+    margin-top: 840px;
+    gap: 0px 50px;
+    &-logo {
+      max-width: 100%;
+    }
+    &-heading {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  #item1 {
+    @include item(535px, 538px, 165px, 309px);
+  }
+  #item2 {
+    @include item(535px, 532px, 622px, 576px);
+  }
+  #item3 {
+    @include item(489px, 488px, 779px, 106px);
+  }
+  #item4 {
+    @include item(389px, 376px, 1124px, -229px);
+  }
+}

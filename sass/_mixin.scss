@@ -1,0 +1,16 @@
+// it's for about gear item
+@mixin item($width, $height, $top, $position) {
+  width: $width;
+  height: $height;
+  left: calc(50% - #{$width} / 2 + #{$position});
+  top: $top;
+}
+
+//is's for stories person image
+
+@mixin personImage($size, $left, $top) {
+  width: $size;
+  height: $size;
+  top: $top;
+  left: $left;
+}

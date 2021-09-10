@@ -1,0 +1,418 @@
+//extra large desktop
+@media screen and (min-width: 2560px) {
+  .wrapper {
+    min-width: 2560px;
+  }
+  .hero {
+    background-position: top;
+    background-size: 100%;
+    padding-bottom: 2000px;
+  }
+}
+
+//small desktop only
+@media screen and (max-width: 1439px) {
+  .wrapper {
+    min-width: 1024px;
+  }
+  .container {
+    max-width: 900px;
+    padding: 0px 10px;
+  }
+  .hero {
+    padding-bottom: 820px;
+  }
+  .about {
+    &__info {
+      margin-top: 1420px;
+    }
+    #item1 {
+      @include item(535px, 538px, 779px, 258px);
+    }
+    #item2 {
+      @include item(535px, 532px, 1472px, 198px);
+    }
+    #item3 {
+      @include item(489px, 488px, 1098px, -141px);
+    }
+    #item4 {
+      @include item(389px, 376px, 1550px, -355px);
+    }
+  }
+  .stories {
+    height: 1152px;
+    &__main {
+      display: flex;
+      flex-direction: column;
+    }
+    &__quote-content {
+      left: 55px;
+      top: 638px;
+    }
+    #person1 {
+      @include personImage(164px, 565px, 547px);
+    }
+    #person2 {
+      @include personImage(100px, 344px, 493px);
+    }
+    #person3 {
+      @include personImage(144px, 561px, 352px);
+    }
+    #person4 {
+      @include personImage(116px, 121px, 352px);
+    }
+    #person5 {
+      @include personImage(100px, 465px, 481px);
+    }
+    #person6 {
+      @include personImage(125px, 56px, 481px);
+    }
+    #person7 {
+      @include personImage(98px, 224px, 460px);
+    }
+    #person8 {
+      @include personImage(71px, 444px, 380px);
+    }
+    #person9 {
+      @include personImage(100px, 305px, 373px);
+    }
+  }
+}
+
+//tablet only
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrapper {
+    min-width: 768px;
+  }
+  .container {
+    max-width: 680px;
+    padding: 0 4px;
+  }
+  .header {
+    .tablet-show {
+      display: unset;
+    }
+  }
+  .hero {
+    padding-bottom: 620px;
+  }
+  .about {
+    &__info {
+      margin-top: 1568px;
+    }
+    #item1 {
+      @include item(535px, 538px, 779px, 258px);
+    }
+    #item2 {
+      @include item(535px, 532px, 1472px, 198px);
+    }
+    #item3 {
+      @include item(489px, 488px, 1098px, -141px);
+    }
+    #item4 {
+      @include item(389px, 376px, 1550px, -355px);
+    }
+  }
+}
+
+//tablet and below
+
+@media screen and (max-width: 1023px) {
+  .title {
+    font-size: 29px;
+  }
+  .desc {
+    font-size: 16px;
+  }
+  .btn-contact {
+    width: 100%;
+    &-input {
+      font-size: 12px;
+    }
+  }
+  .header {
+    .mobile-table-hide {
+      display: none;
+    }
+    .mobile-table-show {
+      display: unset;
+    }
+
+    &__social-item {
+      display: flex;
+      gap: 0px 10px;
+    }
+  }
+  .hero {
+    font-size: 12px;
+    &__main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+    &__heading {
+      margin-bottom: 20px;
+    }
+    &__subheading {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &-content {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .about {
+    padding: 120px 0px;
+    &__info {
+      display: block;
+      &-logo {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 100px;
+      }
+      margin-top: 868px;
+    }
+    #item1 {
+      @include item(270.78px, 272.29px, 664px, 97.01px);
+    }
+    #item2 {
+      @include item(270.78px, 269.26px, 1014.74px, 66.64px);
+    }
+    #item3 {
+      @include item(247.49px, 246.99px, 825.45px, -104.94px);
+    }
+    #item4 {
+      @include item(196.88px, 190.3px, 1189px, -126.24px);
+    }
+  }
+  .leader {
+    &__person {
+      min-width: 30%;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 50px 0px;
+      &-img {
+        display: block;
+        margin: 0 auto;
+        order: -1;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .judges {
+    &__keynote-content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+////small tablet and mobile phone
+@media screen and (max-width: 767px) {
+  .leader {
+    &__person {
+      min-width: 44%;
+    }
+  }
+  .judges {
+    &__persons {
+      grid-template-columns: 1fr;
+    }
+  }
+  .sponsors {
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 30px 0px;
+      &-logo {
+        order: -1;
+      }
+    }
+    &__showcase {
+      &-content {
+        flex-direction: column;
+        gap: 30px 0px;
+      }
+      &-main {
+        transform-origin: 100px 0px;
+      }
+      &-main::before {
+        top: -14px;
+        left: 100px;
+        transform: rotate(45deg);
+      }
+    }
+    &__member {
+      &-sub {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &__partner {
+      display: flex;
+      flex-direction: column;
+      gap: 30px 0px;
+    }
+  }
+  .FAQ {
+    &__questions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px 0px;
+      &-item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//small tablet
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .wrapper {
+    min-width: 480px;
+  }
+  .container {
+    max-width: 428px;
+    padding: 0px 10px;
+  }
+  .header {
+    .tablet-show {
+      display: unset;
+    }
+  }
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 580px;
+  }
+  .stories {
+    height: 1300px;
+    &__main {
+      display: flex;
+      flex-direction: column;
+    }
+    &__quote-content {
+      max-width: 85vw;
+      height: auto;
+      left: -30px;
+      top: 648px;
+      transform-origin: top left;
+    }
+    &__quote-content:before {
+      transform: rotate(45deg);
+      top: -7px;
+      left: 92px;
+    }
+    #person1 {
+      @include personImage(111px, 11px, 544px);
+    }
+    #person2 {
+      @include personImage(79px, 138px, 518px);
+    }
+    #person3 {
+      @include personImage(78px, 217px, 559px);
+    }
+    #person4 {
+      @include personImage(0, 307px, 518px);
+    }
+    #person5 {
+      @include personImage(82px, 251px, 461px);
+    }
+    #person6 {
+      @include personImage(99px, 64px, 436px);
+    }
+    #person7 {
+      @include personImage(107px, 167px, 330px);
+    }
+    #person8 {
+      @include personImage(117px, 40px, 315px);
+    }
+    #person9 {
+      @include personImage(100px, 288px, 352px);
+    }
+  }
+}
+
+//mobile phone
+@media screen and (max-width: 479px) {
+  .wrapper {
+    min-width: unset;
+  }
+  .container {
+    max-width: 320px;
+    padding: 0px 10px;
+  }
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 615px;
+    background-size: cover;
+  }
+  .about {
+    #item1 {
+      @include item(270.78px, 272.29px, 914px, 97.01px);
+    }
+    #item2 {
+      @include item(270.78px, 269.26px, 1264.74px, 66.64px);
+    }
+    #item3 {
+      @include item(247.49px, 246.99px, 1075.45px, -104.94px);
+    }
+    #item4 {
+      @include item(196.88px, 190.3px, 1439px, -126.24px);
+    }
+  }
+  .stories {
+    height: 1500px;
+    &__main {
+      display: flex;
+      flex-direction: column;
+    }
+    &__quote-content {
+      max-width: 85vw;
+      height: auto;
+      left: -0px;
+      top: 848px;
+      transform-origin: 100px 10px;
+    }
+    &__quote-content:before {
+      transform: rotate(45deg);
+      top: -7px;
+      left: 62px;
+    }
+    #person1 {
+      @include personImage(111px, 11px, 744px);
+    }
+    #person2 {
+      @include personImage(79px, 78px, 648px);
+    }
+    #person3 {
+      @include personImage(78px, 167px, 659px);
+    }
+    #person4 {
+      @include personImage(0, 257px, 648px);
+    }
+    #person5 {
+      @include personImage(82px, 201px, 561px);
+    }
+    #person6 {
+      @include personImage(99px, 14px, 536px);
+    }
+    #person7 {
+      @include personImage(107px, 107px, 430px);
+    }
+    #person8 {
+      @include personImage(117px, -10px, 415px);
+    }
+    #person9 {
+      @include personImage(100px, 238px, 442px);
+    }
+  }
+}

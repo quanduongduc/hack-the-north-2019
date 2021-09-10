@@ -1,0 +1,96 @@
+.stories {
+  position: relative;
+  height: 1052px;
+  background-color: #c36d46;
+  padding-top: 150px;
+  color: $pattens-blue;
+  &__main {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__content {
+    max-width: 100%;
+  }
+  &__image {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    &-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+      border-radius: 50%;
+    }
+  }
+  &__quote-content {
+    z-index: 10;
+    cursor: default;
+    max-width: 547px;
+    position: absolute;
+    width: 547px;
+    height: 230px;
+    left: 260px;
+    top: 357px;
+    padding: 32px 15px;
+    background-color: rgba(243, 243, 243, 0.8);
+    color: #000000;
+    border-radius: 8px;
+    .person-quote {
+      margin-bottom: 20px;
+    }
+    transform-origin: top right;
+    animation: zoom-in 200ms ease;
+  }
+  &__quote-content::before {
+    position: absolute;
+    right: -7px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px;
+    border-color: rgba(243, 243, 243, 0.8) transparent transparent
+      rgba(243, 243, 243, 0.8);
+    border-top-left-radius: 2px;
+    transform: rotate(135deg);
+  }
+  .zoom-out-ani {
+    animation: zoom-out 200ms ease forwards;
+  }
+  #person1 {
+    @include personImage(244px, 732px, 213px);
+  }
+  #person2 {
+    @include personImage(100px, 934px, 137px);
+  }
+  #person3 {
+    @include personImage(144px, 1044px, 65px);
+  }
+  #person4 {
+    @include personImage(116px, 1017px, 250px);
+  }
+  #person5 {
+    @include personImage(100px, 1138px, 209px);
+  }
+  #person6 {
+    @include personImage(125px, 1159px, 327px);
+  }
+  #person7 {
+    @include personImage(98px, 961px, 390px);
+  }
+  #person8 {
+    @include personImage(71px, 944px, 520px);
+  }
+  #person9 {
+    @include personImage(100px, 1068px, 456px);
+  }
+}

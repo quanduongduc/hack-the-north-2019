@@ -1,0 +1,35 @@
+.judges {
+  padding: 170px 0px;
+  background: #bc6d58;
+  color: $lightest-grey;
+  &__keynote {
+    &-title {
+      margin-bottom: 30px;
+    }
+    &-content {
+      display: flex;
+      gap: 0px 20px;
+      margin-bottom: 50px;
+    }
+    &-company {
+      margin: 15px 0px;
+    }
+  }
+  &__info-title {
+    margin-bottom: 50px;
+  }
+  &__persons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 35px 0px;
+  }
+  &__person {
+    display: flex;
+    align-items: center;
+    gap: 0px 15px;
+    img {
+      border-radius: 50%;
+    }
+  }
+}

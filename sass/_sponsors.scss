@@ -1,0 +1,124 @@
+.sponsors {
+  padding: 150px 0px;
+  background-color: #eff8fa;
+  color: $gable-green;
+  &__heading {
+    font-weight: 500;
+  }
+  &__header {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: end;
+    &-contact {
+      background-color: $accent-blue;
+      color: $lightest-grey;
+      padding: 15px 30px;
+      border-radius: 35px;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+  &__content {
+    &-desc {
+      margin: 50px 0px;
+      color: #302929;
+    }
+  }
+  &__showcase {
+    &-content {
+      margin: 50px 0px;
+      display: flex;
+      align-items: center;
+      gap: 0px 80px;
+    }
+    &-logo {
+      width: 197px;
+      height: 96px;
+    }
+    &-main {
+      max-width: 824.45px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 45px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      animation: zoom-in 0.5s ease;
+      transform-origin: top left;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -13px;
+        width: 0px;
+        height: 0px;
+        border-width: 14px;
+        border-style: solid;
+        border-color: #ffffff transparent transparent #ffffff;
+        border-top-left-radius: 3px;
+        transform: rotate(-45deg);
+        box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.06);
+      }
+    }
+    &-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0px 15px;
+      &-item {
+        cursor: pointer;
+        background: #c4c4c4;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+      }
+      &-selected-item {
+        background-color: $darkest-blue;
+      }
+    }
+    &-desc {
+      color: #000000;
+      font-weight: 400;
+      margin-bottom: 20px;
+      &:before,
+      &:after {
+        content: '"';
+      }
+    }
+    &-links {
+      color: $accent-blue;
+    }
+  }
+  &__member {
+    margin-top: 100px;
+    &-main {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px 0px;
+      margin-bottom: 100px;
+    }
+    &-sub {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 80px 0px;
+    }
+  }
+  &__partners {
+    margin-top: 100px;
+  }
+  &__partner {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $secondary-font;
+  font-weight: 900;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a,
+input {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  min-width: 1920px;
+  overflow-x: hidden;
+}
+
+.title {
+  font-size: 64px;
+  line-height: $secondary-line-height;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.text-lightest {
+  color: $lightest-grey;
+}
+
+.text-darkest {
+  color: $darkest-grey;
+}
+
+.appearance-ani {
+  -webkit-animation: appearance 2s linear;
+  animation: appearance 2s linear;
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: $primary-line-height;
+  color: $lightest-grey;
+}
+
+.btn-contact {
+  display: flex;
+  align-items: center;
+  max-width: 476px;
+  padding: 4px 4px;
+  gap: 0px 15px;
+  border: 4px solid $accent-blue;
+  border-radius: 35px;
+  background-color: #ffffff;
+  &-input {
+    padding-left: 10px;
+    background-color: transparent;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+  }
+  &-input:focus {
+    outline: none;
+  }
+  &-confirm {
+    cursor: pointer;
+    border: none;
+    background: url(../assets/images/icon/arrow-right-btn.svg);
+    width: 46px;
+    height: 46px;
+    margin-left: -65px;
+    border-radius: 50%;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@-webkit-keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes nearly-appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes nearly-appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes zoom-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(calc(-98px * 8));
+  }
+
+  //5 is number of item / 2
+}
