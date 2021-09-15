@@ -7,7 +7,7 @@ const openMenuBtn = $(".open-menu");
 const closeMenuBtn = $(".close-menu");
 const mobileMenu = $(".mobile-table-nav");
 const mobileMenuOverlay = $(".header__mobile-menu-overlay");
-const questionBtn = $$(".FAQ__question-title");
+const questionBtns = $$(".FAQ__question-title");
 
 function openMobileMenu() {
   mobileMenu.style.visibility = "visible";
@@ -26,6 +26,8 @@ function FaqQuestionDisplay() {
   let isDisplay = false;
   return function (questionBtn, questionContent) {
     if (isDisplay) {
+      console.log(questionBtn);
+      console.log(questionContent);
       questionBtn.firstElementChild.classList.remove(
         "FAQ__question-title-arrow-up"
       );
@@ -41,22 +43,21 @@ function FaqQuestionDisplay() {
   };
 }
 
-function studentSlideShow() {
-  setInterval(() => {
-    studentList.forEach((student) => {
-      let currentTranslate = student.style.transform.replace(/\D/g, "");
-      student.style.transform = `translateX(${nextTranslate}px)`;
-    });
-  }, 1000);
-}
-
 openMenuBtn.onclick = () => {
   openMobileMenu();
 };
 closeMenuBtn.onclick = () => {
   closeMobileMenu();
 };
-
+questionBtns.forEach((question) => {
+  let handleQuestionStatus = FaqQuestionDisplay();
+  question.onclick = (event) => {
+    handleQuestionStatus(
+      event.currentTarget,
+      event.currentTarget.nextElementSibling
+    );
+  };
+});
 window.onscroll = () => {
   const lightestGrey = "#eff8fa";
   const darkestGrey = "#183249"; // it's also backgroundColor when scroll
