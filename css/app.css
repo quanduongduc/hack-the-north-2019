@@ -298,6 +298,7 @@ img {
 .header .open-menu {
   font-size: 24px;
   background: transparent;
+  color: inherit;
 }
 
 .header .open-menu,
@@ -1130,6 +1131,7 @@ img {
 
 .footer__contact {
   width: 100%;
+  color: #183249;
 }
 
 .footer__students {
